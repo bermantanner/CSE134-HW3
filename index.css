@@ -3,7 +3,7 @@
   --bg: #cbcbcb;  
   --text: #3b3b3b;    
   --icon: #848495;
-  --link: #0972eb;      /* regular link/icon hover base */
+  --link: #3c84d7;      /* regular link/icon hover base */
   --link-hover: #0091ff;
 
   /* button surfaces */
@@ -42,6 +42,14 @@ html, body {
   color: var(--text);
 }
 
+/* 
+  This was suggested by chatgpt:
+  "This universal box-sizing reset ensures consistent sizing across all elements.
+  By setting `box-sizing: border-box` on every element (and their ::before/::after pseudo-elements),
+  padding and borders are included in the total width/height calculation.
+  This prevents unexpected layout shifts, simplifies responsive design, 
+  and makes sizing more predictable across browsers."
+*/
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -70,7 +78,9 @@ h1, h2, h3 {
   margin: 0;
   margin-block: 0.5em 0.6em;
   line-height: 1.2;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
+
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
@@ -112,9 +122,14 @@ a:focus-visible { outline: 2px solid var(--link-hover); outline-offset: 3px; }
 }
 
 .work-item {
-  border: 1px solid var(--line); 
+  border: 2px solid var(--text); 
   border-radius: 10px;
-  padding: var(--space-4);       
+  padding: var(--space-4); 
+  margin-bottom: var(--space-5);      
+}
+
+.headshot {
+  border: 2px solid var(--text);
 }
 
 
